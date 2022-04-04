@@ -1,4 +1,5 @@
 import { useCallback, useRef } from 'react';
+import Input from '../Input/Input';
 import styles from './Form.module.css';
 
 export default function Form(){
@@ -27,12 +28,15 @@ export default function Form(){
 
   return (
     <form className={styles.form} onSubmit={submitForm}>
-      <input
+
+      {/* Componente Input passando uma ref como props */}
+      <Input
         type="text"
         placeholder="Digite seu nome"
         className={styles.input}
         ref={nameInputRef}
       />
+      
       <input
         type="password"
         placeholder="Digite sua senha"
